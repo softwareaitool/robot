@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Best Email Marketing Tool for Small Businesses (2026 Review)</title>
+
+    <style>
+      :root{
+        --ink:#111827;
+        --muted:#4b5563;
+        --line:rgba(15,23,42,.12);
+        --card:rgba(255,255,255,.92);
+        --shadow: 0 18px 50px rgba(15,23,42,.12);
+        --radius:18px;
+
+        --primary:#0066ff;
+        --primary2:#6a5cff;
+
+        --max:1000px;
+      }
+
+      *{box-sizing:border-box}
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        line-height: 1.6;
+
+        /* Gradient background (only styling change) */
+        background:
+          radial-gradient(900px 520px at 10% 5%, rgba(106,92,255,.18), transparent 60%),
+          radial-gradient(900px 520px at 90% 10%, rgba(0,102,255,.16), transparent 62%),
+          radial-gradient(900px 600px at 50% 100%, rgba(34,197,94,.10), transparent 60%),
+          linear-gradient(180deg, #f7f8ff, #f3fbff);
+      }
+
+      .container {
+        width: 90%;
+        max-width: var(--max);
+        margin: auto;
+        padding: 22px 0 110px;
+      }
+
+      h1,h2,h3 { text-align: center; margin: 0 0 10px; }
+      p{ margin: 0 0 14px; }
+      ul{ margin: 10px 0 0; padding-left: 20px; }
+      li{ margin: 8px 0; }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--primary), var(--primary2));
+        color: #fff;
+        padding: 14px 25px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 12px;
+        margin: 10px 0;
+        border: 1px solid rgba(255,255,255,.18);
+        box-shadow: 0 12px 28px rgba(0,102,255,.18);
+        transition: transform .15s ease, filter .15s ease;
+      }
+      .btn:hover { transform: translateY(-1px); filter: brightness(1.02); }
+
+      .card {
+        background: var(--card);
+        padding: 20px;
+        border-radius: var(--radius);
+        margin: 20px 0;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--line);
+        backdrop-filter: blur(10px);
+      }
+
+      /* Two-column layout for your sections */
+      .row2{
+        display:grid;
+        grid-template-columns: 1.1fr .9fr; /* col1 / col2 */
+        gap: 18px;
+        align-items: center;
+      }
+      .row2.reverse{
+        grid-template-columns: .9fr 1.1fr;
+      }
+
+      /* Image styling */
+      .imgbox{
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        overflow: hidden;
+        background:
+          linear-gradient(135deg, rgba(0,102,255,.10), rgba(106,92,255,.10));
+        box-shadow: 0 14px 34px rgba(15,23,42,.10);
+        min-height: 220px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        padding: 14px;
+      }
+      .imgbox img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        display:block;
+      }
+      .imgbox svg{ width:100%; height:auto; display:block; }
+
+      /* Table */
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        background: rgba(255,255,255,.75);
+        border-radius: 14px;
+        overflow: hidden;
+      }
+      .table th,
+      .table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+      }
+      .table th{
+        background: rgba(255,255,255,.95);
+      }
+
+      /* Trust (keep your content, only layout improved) */
+      .trust {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 20px 0;
+        gap: 10px;
+      }
+      .trust div {
+        margin: 10px;
+        background: rgba(255,255,255,.78);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 14px 16px;
+        min-width: 180px;
+        box-shadow: 0 10px 28px rgba(15,23,42,.08);
+      }
+
+      /* Sticky */
+      .sticky {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: rgba(255,255,255,.78);
+        backdrop-filter: blur(12px);
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid var(--line);
+        z-index: 50;
+      }
+
+      /* Footer */
+      .footer {
+        background: #222;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+        border-top: 1px solid rgba(255,255,255,.12);
+      }
+
+      /* Popup */
+      .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 60;
+        padding: 16px;
+      }
+      .popup-content {
+        background: rgba(255,255,255,.95);
+        padding: 30px;
+        text-align: center;
+        border-radius: 16px;
+        width: 90%;
+        max-width: 400px;
+        border: 1px solid var(--line);
+        box-shadow: 0 25px 70px rgba(0,0,0,.25);
+      }
+
+      /* Responsive */
+      @media (max-width: 860px){
+        .row2, .row2.reverse{ grid-template-columns: 1fr; }
+        .imgbox{ min-height: 200px; }
+      }
+      h2{
+        text-align: left;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- ===== YOUR HERO SECTION (same content) ===== -->
+      <div class="card">
+        <div class="row2">
+          <div>
+            <h1>Looking for an Affordable Email Marketing Tool?</h1>
+            <p style="text-align: center; font-size: 18px">
+              We compared the top platforms — here’s what we found.
+            </p>
+
+            <div style="text-align: center">
+              <a href="YOUR_AFFILIATE_LINK_HERE" class="btn">Start Free Trial</a>
+            </div>
+          </div>
+
+          <div class="imgbox" aria-label="Hero image">
+            <!-- Image placeholder (replace with your own image if you want) -->
+            <img src="./3.webp" alt="" style="width: 100%;">
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== YOUR SECTION: Why Most Small Businesses Overpay (same content) ===== -->
+      <div class="card">
+        <div class="row2 reverse">
+          <div class="imgbox" aria-label="Overpay image">
+             <img src="./1.webp" alt="" style="width: 100%;">
+          </div>
+
+          <div>
+            <h2>Why Most Small Businesses Overpay</h2>
+            <ul>
+              <li>Expensive subscriber-based pricing</li>
+              <li>Limited automation in free plans</li>
+              <li>No built-in CRM</li>
+              <li>Extra charges for SMS & WhatsApp</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== YOUR SECTION: Why This Platform Stands Out (same content) ===== -->
+      <div class="card">
+        <div class="row2">
+          <div>
+            <h2>Why This Platform Stands Out</h2>
+            <ul>
+              <li>✔ Unlimited Contacts</li>
+              <li>✔ Advanced Automation</li>
+              <li>✔ Built-in CRM</li>
+              <li>✔ Email + SMS + WhatsApp</li>
+              <li>✔ Free Plan Available</li>
+            </ul>
+            <a href="YOUR_AFFILIATE_LINK_HERE" class="btn">Check Pricing & Features</a>
+          </div>
+
+          <div class="imgbox" aria-label="Stand out image">
+             <img src="./2.webp" alt="" style="width: 100%;">
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== YOUR SECTION: Comparison Table (same content) ===== -->
+      <div class="card">
+        <div class="row2 reverse">
+          <div class="imgbox" aria-label="Comparison image">
+             <img src="./4.webp" alt="" style="width: 100%;">
+          </div>
+
+          <div>
+            <h2>Comparison Table</h2>
+            <table class="table">
+              <tr>
+                <th>Feature</th>
+                <th>Recommended Tool</th>
+                <th>Others</th>
+              </tr>
+              <tr>
+                <td>Free Plan</td>
+                <td>Yes</td>
+                <td>Limited</td>
+              </tr>
+              <tr>
+                <td>Automation</td>
+                <td>Advanced</td>
+                <td>Basic</td>
+              </tr>
+              <tr>
+                <td>CRM Included</td>
+                <td>Yes</td>
+                <td>Extra Cost</td>
+              </tr>
+              <tr>
+                <td>Pricing</td>
+                <td>Affordable</td>
+                <td>Higher</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== YOUR TRUST SECTION (same content) ===== -->
+      <div class="card">
+        <div class="row2">
+          <div>
+            <div class="trust">
+              <div>
+                <h3>500,000+</h3>
+                <p>Businesses Worldwide</p>
+              </div>
+              <div>
+                <h3>4.5★ Rating</h3>
+                <p>User Reviews</p>
+              </div>
+              <div>
+                <h3>Free Trial</h3>
+                <p>No Credit Card Required</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="imgbox" aria-label="Trust image">
+             <img src="./5.webp" alt="" style="width: 100%;">
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== YOUR FAQ SECTION (same content) ===== -->
+      <div class="card">
+        <div class="row2 reverse">
+          <div class="imgbox" aria-label="FAQ image">
+            <img src="./6.webp" alt="" style="width: 100%;">
+          </div>
+
+          <div>
+            <h2>Frequently Asked Questions</h2>
+            <p>
+              <strong>Is there a free plan?</strong><br />Yes, you can start without
+              paying.
+            </p>
+            <p>
+              <strong>Is it beginner friendly?</strong><br />Yes, drag & drop editor
+              included.
+            </p>
+            <p>
+              <strong>Can I migrate from Mailchimp?</strong><br />Yes, easy import
+              options available.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== YOUR FINAL CTA SECTION (same content) ===== -->
+      <div class="card">
+        <div class="row2">
+          <div class="center">
+            <h2 style="text-align: left;">Ready to Try It?</h2>
+            <p>Start with the free plan and explore all features at your own pace. No commitment required.</p>
+            <a href="YOUR_AFFILIATE_LINK_HERE" class="btn">Start Free Now</a>
+          </div>
+
+          <div class="imgbox" aria-label="CTA image">
+             <img src="./7.webp" alt="" style="width: 100%;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky">
+      <a href="YOUR_AFFILIATE_LINK_HERE" class="btn">Start Free Trial</a>
+        <p>
+  <a href="privacy.html" style="color:#000000;text-decoration:underline;">Privacy Policy</a>
+  |
+  <a href="terms.html" style="color:#000000;text-decoration:underline;">Terms & Conditions</a>
+</p>
+    </div>
+
+    <div class="popup" id="exitPopup">
+      <div class="popup-content">
+        <h2 style="text-align: center;">Your Free Plan Is Waiting...</h2>
+        <p>Test powerful email marketing features and see how it works for your business.
+No commitment required.</p>
+        <a href="YOUR_AFFILIATE_LINK_HERE" class="btn">Start Free</a>
+      </div>
+    </div>
+
+  
+
+    <div class="footer">
+      <p>
+        This site contains affiliate links. We may earn a commission at no extra
+        cost to you.
+      </p>
+      <p>Privacy Policy | Contact Us | About Us</p>
+    </div>
+
+    <script>
+      document.addEventListener("mouseout", function (e) {
+        if (!e.toElement && !e.relatedTarget) {
+          document.getElementById("exitPopup").style.display = "flex";
+        }
+      });
+    </script>
+  </body>
+</html>
